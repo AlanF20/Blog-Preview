@@ -1,11 +1,84 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
+import Main from '../components/Main.astro';
+import '@fontsource-variable/figtree';
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+<Main />
 </Layout>
+
+<style is:global>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	html{
+		font-size: 62.5%;
+		font-family: 'Figtree Variable', sans-serif;
+	}
+	
+	:root{
+		--yellow: #f4d04e;
+		--gray950: #111111;
+		--gray500: #6b6b6b;
+		--white: #ffffff;
+
+		--s300: 24px;
+		--s150: 12px;
+		--s100: 8px;
+		--s50: 4px;
+	}
+	body{
+		width: 100vw;
+		height: 100vh;
+		margin: 0 auto;
+		max-width: 1200px;
+		background-color: var(--yellow);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.TextPreset1{
+		font-size: 2.4rem;
+		line-height: 150%;
+		letter-spacing: 0px;
+		font-weight: 800;
+
+	}
+	.TextPreset2{
+		font-size: 1.6rem;
+		line-height: 150%;
+		letter-spacing: 0px;
+		font-weight: 500;
+	}
+	.TextPreset3{
+		font-size: 1.4rem;
+		line-height: 150%;
+		letter-spacing: 0px;
+		font-weight: 500;
+	}
+	.TextPreset3Bold{
+		font-size: 1.4rem;
+		line-height: 150%;
+		letter-spacing: 0px;
+		font-weight: 700;
+	}
+	@media (max-width: 520px) {
+		.TextPreset1{
+			font-size: 2.0rem;
+		}
+		.TextPreset2{
+			font-size: 1.4rem;
+		}
+		.TextPreset3{
+			font-size: 1.2rem;
+		}
+		.TextPreset3Bold{
+			font-size: 1.2rem;
+		}
+	}
+</style>
